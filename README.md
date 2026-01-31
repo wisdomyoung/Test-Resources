@@ -1,6 +1,13 @@
 Pytest API 自动化测试框架
 这是一个基于 Python + Pytest 的接口自动化测试框架，集成了 YAML 数据驱动、Allure 报告和日志记录功能。
 📂 项目结构
+
+
+
+
+
+
+
 pytest_framework/
 ├── .venv                       # Python 虚拟环境
 ├── config/
