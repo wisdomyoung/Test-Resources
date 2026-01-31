@@ -1,0 +1,33 @@
+-
+  case_desc: "验证帖子ID为1的详细信息"
+  request:
+    method: "GET"
+    url: "/posts/1"
+  expected:
+    status_code: 200
+    # 定义我们期望的精确值
+    exact_match:
+      userId: 1
+      id: 1
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+    # 定义文本包含关系
+    text_contains:
+      field: "title"
+      text: "repellat"
+
+-
+  case_desc: "验证帖子ID为1的标题中不包含 'Young'"
+  request:
+    method: "GET"
+    url: "/posts/1"
+  expected:
+    status_code: 200
+    # 也可以复用上面的 exact_match，或者只验证 ID
+    exact_match:
+      userId: 1
+      id: 1
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+    # 定义文本不包含关系
+    text_not_contains: # 新增字段
+      field: "title"
+      text: "Young"

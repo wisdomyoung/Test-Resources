@@ -1,0 +1,33 @@
+-
+  case_desc: "获取用户ID为1的信息"
+  request:
+    method: "GET"
+    url: "/posts"
+    params:
+      userId: 1
+  expected:
+    status_code: 200
+    has_key_in_first_item: "title"
+
+-
+  case_desc: "获取用户ID为2的信息"
+  request:
+    method: "GET"
+    url: "/posts"
+    params:
+      userId: 2
+  expected:
+    status_code: 200
+    has_key_in_first_item: "title"
+
+
+#-
+#  case_desc: "获取用户ID为3的信息"
+#  request:
+#    method: "GET"
+#    url: "/posts"
+#    params:
+#      userId: 2
+#  expected:
+#    status_code: 200
+#    has_key_in_first_item: "title"

@@ -1,0 +1,17 @@
+# 🔧 核心框架
+pytest>=7.0.0
+requests>=2.25.0
+
+# 📊 测试报告 (HTML 和 Allure)
+pytest-html>=3.0.0
+allure-pytest>=2.9.0
+pytest-xdist>=2.0.0
+
+# 📝 数据处理与配置
+PyYAML>=6.0
+loguru>=0.6.0
+pandas>=1.3.0
+
+# 🛡️ 辅助工具 (断言增强、失败重试、用例排序)
+pytest-rerunfailures>=10.0.0
+pytest-ordering>=0.6.0
